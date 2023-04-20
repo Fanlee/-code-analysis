@@ -2,7 +2,7 @@
  * @Author: lihuan
  * @Date: 2023-04-19 14:01:53
  * @LastEditors: lihuan
- * @LastEditTime: 2023-04-19 14:01:59
+ * @LastEditTime: 2023-04-20 15:42:05
  * @Description:
  */
 const { execSync } = require('child_process') // 子进程操作
@@ -25,7 +25,7 @@ module.exports = {
     {
       // 必须，待扫描源码的配置信息
       name: 'Market', // 必填，项目名称
-      path: ['src'], // 必填，需要扫描的文件路径（基准路径为配置文件所在路径）
+      path: ['src', 'test'], // 必填，需要扫描的文件路径（基准路径为配置文件所在路径）
       packageFile: 'package.json', // 可选，package.json 文件路径配置，用于收集依赖的版本信息
       format: null, // 可选, 文件路径格式化函数,默认为null,一般不需要配置
       httpRepo: `https://gitlab.xxx.com/xxx/-/blob/${getGitBranch()}/`, // 可选，项目gitlab/github url的访问前缀，用于点击行信息跳转，不填则不跳转
