@@ -2,7 +2,7 @@
  * @Author: lihuan
  * @Date: 2023-04-19 14:01:53
  * @LastEditors: lihuan
- * @LastEditTime: 2023-04-20 15:42:05
+ * @LastEditTime: 2023-04-21 16:02:31
  * @Description:
  */
 const { execSync } = require('child_process') // 子进程操作
@@ -33,7 +33,7 @@ module.exports = {
   ],
   analysisTarget: 'framework', // 必须，要分析的目标依赖名
   analysisPlugins: [], // 可选，自定义分析插件，默认为空数组，一般不需要配置
-  blackList: ['app.localStorage.set'], // 可选，需要标记的黑名单api，默认为空数组
+  blackList: ['document.getElementById'], // 可选，需要标记的黑名单api，默认为空数组
   browserApis: ['window', 'document', 'history', 'location'], // 可选，要分析的BrowserApi，默认为空数组
   reportDir: 'report', // 可选，生成代码分析报告的目录，默认为'report',不支持多级目录配置
   reportTitle: 'Market依赖调用分析报告', // 可选，分析报告标题，默认为'依赖调用分析报告'
