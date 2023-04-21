@@ -2,7 +2,7 @@
  * @Author: lihuan
  * @Date: 2023-04-21 11:04:38
  * @LastEditors: lihuan
- * @LastEditTime: 2023-04-21 11:32:06
+ * @LastEditTime: 2023-04-21 14:52:21
  * @Description:
  */
 exports.defaultPlugin = (analysisContext) => {
