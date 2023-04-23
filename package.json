@@ -1,10 +1,14 @@
 {
   "name": "code-analysis",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./api/index.js",
+  "module": "./api/index.js",
   "repository": "git@github.com:Fanlee/code-analysis.git",
   "author": "lihuan <anyueleo@163.com>",
   "license": "MIT",
+  "bin": {
+    "ca": "./cli/index.js"
+  },
   "dependencies": {
     "@vue/compiler-dom": "^3.2.47",
     "chalk": "4.1.0",
@@ -13,6 +17,7 @@
     "js-md5": "^0.7.3",
     "moment": "^2.29.4",
     "ora": "5.1.0",
+    "single-line-log": "1.1.2",
     "typescript": "4.7.4"
   }
 }

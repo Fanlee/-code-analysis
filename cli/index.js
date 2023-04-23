@@ -2,6 +2,7 @@
 const path = require('path')
 const fs = require('fs')
 const program = require('commander')
+const chalk = require('chalk')
 const { REPORTDEFAULTDIR, VUETEMPTSDIR } = require(path.join(
   __dirname,
   '../lib/constant'
@@ -11,6 +12,9 @@ const { writeReport, writeDiagnosisReport } = require(path.join(
   __dirname,
   '../lib/report'
 ))
+// 分析入口
+const codeAnalysis = require(path.join(__dirname, '../lib/index'))
+
 program
   .command('analysis')
   .description('分析代码并且输出报告')
@@ -59,7 +63,7 @@ program
               if (config && config.analysisTarget) {
                 try {
                   // 如果分析报告目录已经存在，则先删除目录
-                  rmdir(config.reportDir || REPORTDEFAULTDIR)
+                  rmDir(config.reportDir || REPORTDEFAULTDIR)
                   // 如果temp目录已经存在，则先删除目录
                   rmDir(VUETEMPTSDIR)
                   // 如果需要扫描vue文件，创建temp目录
