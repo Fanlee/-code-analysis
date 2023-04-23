@@ -8,6 +8,7 @@
   "dependencies": {
     "@vue/compiler-dom": "^3.2.47",
     "chalk": "4.1.0",
+    "commander": "6.2.0",
     "glob": "7.1.6",
     "js-md5": "^0.7.3",
     "moment": "^2.29.4",
